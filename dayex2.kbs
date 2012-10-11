@@ -1,0 +1,39 @@
+start:
+
+cls
+
+print "Type in no caps please**"
+
+input "First number of date? ", a$
+input "Second number of date? ", b$
+input "Third number of date? ", c$
+
+cls
+
+print a$; 
+print "/";
+print b$;
+print "/";
+print c$
+
+input "Is this correct? Type yes or no                                               ", f$
+
+if f$ = "no" then goto start
+if f$ = "yes" then goto continue
+continue:
+dim d$(100)
+
+d$ = {"Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "Monday", "Tuesday"}
+
+
+b = int(b$)
+
+if b > 7 and b < 15 then b = b - 7
+if b > 14 and b < 22 then b = b - 14
+if b > 21 and b < 29 then b = b - 21
+if b > 28 then b = b - 28
+
+F = b - 1
+
+print "This date is a ";
+print d$[F]

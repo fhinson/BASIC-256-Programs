@@ -1,0 +1,391 @@
+clg
+
+landingpad:
+color orange
+rect 50, 275, 200, 25
+start:
+
+L = 15
+aa = 13.333333333
+ab = 100
+ac = 100
+ad = 102
+ae = 101
+af = 102
+ag = 181
+ah = 181
+ai = 137
+aj = 137
+ak = 181
+al = 181
+am = 182
+an = 280
+ao = 210
+ap = 260
+aq = 210
+ar = 260
+as = 210
+rem -------------
+ba = 172-172
+bb = 82-172
+bc = 82-172
+bd = 02-172
+be = 01-172
+bf = 02-172
+bg = 01-172
+bh = 01-172
+bi = 37-172
+bj = 37-172
+bk = 01-172
+bl = 01-172
+bm = -18-172
+bn = -25-172
+bo = -95-172
+bp = -25-172
+bq = -75-172
+br = -25-172
+bs = -75-172
+
+part1:
+
+noseb4:
+color orange
+dim a(6)
+a[0] = 154
+a[1] = aa
+a[2] = 190
+a[3] = ab
+a[4] = 120
+a[5] = ac
+poly a
+
+chaisseb4:
+color orange
+rect 121, ad, 71, 80
+rect 120, ae, 71, 80
+color white
+rect 121, af, 70, 79
+
+
+wing1b4:
+color orange
+dim b(6)
+b[0] = 20
+b[1] = ag
+b[2] = 120
+b[3] = ah
+b[4] = 120
+b[5] = ai
+poly b
+
+
+wing2b4:
+dim c(6)
+c[0] = 191
+c[1] = aj
+c[2] = 191
+c[3] = ak
+c[4] = 291
+c[5] = al
+poly c
+
+fuelb4:
+color orange
+rect 126.5, am, 60, 20
+
+smokeb4:
+color gray
+line 155, an, 155, ao
+line 145, ap, 145, aq
+line 165, ar, 165, as
+
+countdown:
+print "20"
+sound (440, 50)
+pause 1
+cls
+print "19"
+sound (440, 50)
+pause 1
+cls
+print "18"
+sound (440, 50)
+pause 1
+cls
+print "17"
+sound (440, 50)
+pause 1
+cls
+print "16"
+sound (440, 50)
+pause 1
+cls
+print "15"
+sound (440, 50)
+pause 1
+cls
+print "14"
+sound (440, 50)
+pause 1
+cls
+print "13"
+sound (440, 50)
+pause 1
+cls
+print "12"
+sound (440, 50)
+pause 1
+cls
+print "11"
+sound (440, 50)
+pause 1
+cls
+print "10"
+sound (440, 50)
+pause 1
+cls
+print "9"
+sound (440, 50)
+pause 1
+cls
+print "8"
+sound (440, 50)
+pause 1
+cls
+print "7"
+sound (440, 50)
+pause 1
+cls
+print "6"
+sound (440, 50)
+pause 1
+cls
+print "5"
+sound (440, 50)
+pause 1
+cls
+print "4"
+sound (440, 50)
+pause 1
+cls
+print "3"
+sound (440, 50)
+pause 1
+cls
+print "2"
+sound (440, 50)
+pause 1
+cls
+print "1"
+sound (440, 50)
+pause 1
+cls
+print "0"
+sound (440, 50)
+pause 1
+cls
+print "NOW LAUNCHING"
+sound (500, 1500) 
+
+launchrocket:
+aa = aa - L 
+ab = ab - L
+ac = ac - L
+ad = ad - L
+ae = ae - L
+af = af - L
+ag = ag - L
+ah = ah - L
+ai = ai - L
+aj = aj - L
+ak = ak - L
+al = al - L
+am = am - L
+an = an - L
+ao = ao - L
+ap = ap - L
+aq = aq - L
+ar = ar - L
+as = as - L
+if as < -30 then goto part2
+flashinglights:
+
+for t = 1 to 5
+color red
+circle 35, 285, 10
+pause 0.2
+color blue
+circle 35, 285, 10
+pause 0.2
+
+color white
+circle 155, 285, 10
+pause 0.2
+color orange
+circle 155, 285, 10
+pause 0.2
+
+color yellow
+circle 275, 285, 10
+pause 0.2
+color green
+circle 275, 285, 10
+pause 0.2
+clg
+gosub drawall
+goto launchrocket
+
+drawall:
+
+nose:
+color orange
+dim a(6)
+a[0] = 154
+a[1] = aa
+a[2] = 190
+a[3] = ab
+a[4] = 120
+a[5] = ac
+poly a
+
+
+chaisse:
+color orange
+rect 121, ad, 71, 80
+rect 120, ae, 71, 80
+color white
+rect 121, af, 70, 79
+
+
+wing1:
+color orange
+dim b(6)
+b[0] = 20
+b[1] = ag
+b[2] = 120
+b[3] = ah
+b[4] = 120
+b[5] = ai
+poly b
+
+
+wing2:
+dim c(6)
+c[0] = 191
+c[1] = aj
+c[2] = 191
+c[3] = ak
+c[4] = 291
+c[5] = al
+poly c
+
+fuel:
+color orange
+rect 126.5, am, 60, 20
+
+smoke:
+color gray
+line 155, an, 155, ao
+line 145, ap, 145, aq
+line 165, ar, 165, as
+
+return
+
+part2:
+cls
+print "NOW DESCENDING"
+sound (500, 1500)
+
+rocketdescend:
+cls
+print "NOW DESCENDING" 
+ba = ba + L
+bb = bb + L
+bc = bc + L
+bd = bd + L
+be = be + L
+bf = bf + L
+bg = bg + L
+bh = bh + L
+bi = bi + L
+bj = bj + L
+bk = bk + L
+bl = bl + L
+bm = bm + L
+bn = bn + L
+bo = bo + L
+bp = bp + L
+bq = bq + L
+br = br + L
+bs = bs + L
+pause 0.25
+
+gosub landingpad2
+goto rocketdescend
+
+if ba > 1 then goto landingpad
+landingpad2:
+color orange
+rect 50, 275, 200, 25
+
+drawall2:
+
+noseafter:
+color orange
+dim a(6)
+a[0] = 154
+a[1] = ba
+a[2] = 190
+a[3] = bb
+a[4] = 120
+a[5] = bc
+poly a
+
+chaisseafter:
+color orange
+rect 121, bd, 71, 80
+rect 120, be, 71, 80
+color white
+rect 121, bf, 70, 79
+
+
+wing1after:
+color orange
+dim b(6)
+b[0] = 20
+b[1] = bg
+b[2] = 120
+b[3] = bh
+b[4] = 120
+b[5] = bi
+poly b
+
+
+wing2after:
+dim c(6)
+c[0] = 191
+c[1] = bj
+c[2] = 191
+c[3] = bk
+c[4] = 291
+c[5] = bl
+poly c
+
+fuelafter:
+color orange
+rect 126.5, bm, 60, 20
+
+smokeafter:
+color gray
+line 155, bn, 155, bo
+line 145, bp, 145, bq
+line 165, br, 165, bs
+
+ 
+
+clg
+return
+
+
+
+

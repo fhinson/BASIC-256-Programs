@@ -1,0 +1,131 @@
+cls
+input "Enter 1st number:  ", a$
+input "Enter 2nd number:  ", b$
+input "Enter 3rd number:  ", c$
+input "Enter 4th number:  ", d$
+
+a = int(a$)
+b = int(b$)
+c = int(c$)
+d = int(d$)
+
+
+for x = 0 to 1000
+if a+x = b and b+x = c and c+x = d then goto check1
+next x
+
+for x = 0 to 1000
+if a-x = b and b-x = c and c-x = d then goto check2
+next x
+
+for x = 0 to 1000
+if a*x = b and b*x = c and c*x = d then goto check3
+next x
+
+for x = 0 to 1000
+if a/x = b and b/x = c and c/x = d then goto check4
+next x
+
+for x = 0 to 1000
+for z = 0 to 1000
+if (a*x)+z = b and (b*x)+z = c and (c*x)+z = d then goto check5
+next z
+next x
+
+for x = 0 to 1000
+for z = 0 to 1000
+if (a*x)-z = b and (b*x)-z = c and (c*x)-z = d then goto check6
+next z
+next x
+
+for x = 0 to 1000
+for z = 0 to 1000
+if (a/x)+z = b and (b/x)+z = c and (c/x)+z = d then goto check7
+next z
+next x
+
+for x = 0 to 1000
+for z = 0 to 1000
+if (a/x)-z = b and (b/x)-z = c and (c/x)-z = d then goto check8
+next z
+next x
+
+for x = 0 to 1000
+if a^x = b and b^x = c and c^x = d then goto check9
+next x
+
+for x = 0 to 1000
+for z = 0 to 1000
+if (a+x) = b and (b+x+1) = c and (c+x+2)= d then goto check10
+next z
+next x
+
+if a + b = c and b + c = d then goto check11
+
+end
+
+check1:
+fa = d+x
+print "5th number is ";
+print fa
+end
+
+check2:
+fb = d-x
+print "5th number is ";
+print fb
+end
+
+check3:
+fc = d*x
+print "5th number is ";
+print fc
+end
+
+check4:
+fd = d/x
+print "5th number is ";
+print fd
+end
+
+check5:
+fe = (d*x)+z
+print "5th number is ";
+print fe
+end
+
+check6:
+ff = (d*x)-z
+print "5th number is ";
+print ff
+end
+
+check7:
+fg = (d/x)+z
+print "5th number is ";
+print fg
+end
+
+check8:
+fh = (d/x)-z
+print "5th number is ";
+print fh
+end
+
+check9:
+fi = d^x
+print "5th number is ";
+print fi
+end
+
+check10:
+fj = d+x+3
+print "5th number is ";
+print fj
+end
+
+check11:
+fk = c + d
+print "5th number is ";
+print fk
+end

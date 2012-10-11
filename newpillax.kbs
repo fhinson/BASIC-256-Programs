@@ -1,0 +1,80 @@
+clg
+
+c = 120
+
+
+
+for k= 0 to 80
+rem make person
+circle 20,35,10
+color darkorange
+line 20,55,20,40
+color darkred
+rect 10,50,20,25
+line 40,60,0,60
+line 0,100,10,60
+color darkred
+line 41+k,101,31,66
+ 
+rem make pillar
+color red
+rect 0,100,220,335
+color darkgreen
+
+line 0,299,280,299
+rem make ball
+color white
+circle 120,78,21
+color black
+circle 120,78,20
+ clg
+next k
+
+
+fastgraphics
+rem move ball
+for c = 120 to 220
+
+rem make pillar
+color red
+rect 0,100,220,335
+color darkgreen
+
+line 0,299,280,299
+
+rem make person
+circle 20,35,10
+color darkorange
+line 20,55,20,40
+color darkred
+rect 10,50,20,25
+line 40,60,0,60
+line 121,100,30,65
+line 10,60,5,100
+
+rem make ball
+color white
+circle c,78,21
+color black
+circle c,78,20
+refresh
+next c
+color white
+circle c,78,21
+
+
+rem drop ball
+d = 220
+for d = 120 to 278
+ 
+rem make pillar
+color red
+rect 20,100,80,135
+color darkgreen
+line 0,299,280,299
+color white
+circle 245, d, 21
+color black
+circle 245,d,20
+refresh
+next d

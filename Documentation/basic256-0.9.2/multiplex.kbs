@@ -1,0 +1,7 @@
+number1=1951
+number2=1954
+number3=1993
+number4=1994
+number5=1998
+answer=number1*number2*number3*number4*number5
+print answer

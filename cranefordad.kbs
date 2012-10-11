@@ -1,0 +1,116 @@
+clg
+
+start:
+K = 5
+
+aa = 280
+ab = 297
+ac = 262
+rem ------------------------
+ba = 135
+y = 210
+z = 170
+bb = 240
+bc = 250 
+bd = 250
+ea = 280
+eb = 280
+fa = 135
+fb = 240
+rem ------------------------
+ca = 263
+cb = 278
+cc = 293
+cd = 270.5
+ce = 285.5
+cf = 278
+rem ------------------------
+da = 265
+db = 260
+dc = 255
+
+part1:
+background:
+color darkgray 
+rect 0,0,300,300 
+
+
+body:
+color white
+rect 49, 124, 31, 101
+rect 50, 125, 31, 101
+color darkorange
+rect 50, 125, 30, 100
+
+
+base:
+color darkorange
+rect 15, 225, 101, 26
+rect 14, 224, 101, 26
+color white
+rect 15, 225, 100, 25
+
+hooksupport:
+color darkorange
+rect 79, 124, 200, 10
+rect 80, 125, 201, 11
+color white
+rect 80, 125, 200, 10
+color darkorange
+rect 0, 124, 49, 10
+rect 1, 125, 50, 11
+color white
+rect 1, 125, 49, 10
+
+light:
+rect 61, 115, 7, 10
+
+wheels:
+color white
+circle 25, 262, 11
+color darkorange
+circle 25, 262, 10
+color white
+circle 65, 262, 11
+color darkorange
+circle 65, 262, 10
+color white
+circle 105, 262, 11
+color darkorange
+circle 105, 262, 10
+
+hookcable:
+line ea, fa, eb, fb 
+
+hook:
+dim a(6)
+a[0] = aa
+a[1] = bb 
+a[2] = ab
+a[3] = bc 
+a[4] = ac
+a[5] = bd 
+poly a
+
+crate1:
+color white
+line 257, 270, 297, 270
+line 257, 240, 257, 270
+line 297, 240, 297, 270
+
+crate2:
+color darkorange
+line 150, 270, 190, 270
+line 150, 240, 150, 270
+line 190, 240, 190, 270
+
+balls:
+circle ca, da, 4
+circle cb, da, 4
+circle cc, da, 4
+circle cd, db, 4
+circle ce, db, 4
+circle cf, dc, 4
+
+
+

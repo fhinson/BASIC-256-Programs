@@ -1,0 +1,32 @@
+
+fastgraphics
+G = 1
+a = 140
+b = 25
+c = 165
+d = 1
+t = 262
+u = 5
+v = 33
+w = 65
+x = 232
+q = 262
+moveshuttle1:
+for k = 1 to 232
+color blue
+rect t, u, v, w
+u = u + G
+refresh
+clg
+if k = 232 then goto moveshuttle1a
+next k
+end
+moveshuttle1a:
+for k = 1 to 147
+color blue
+rect q, x, v, w
+q = q - G
+refresh
+clg
+if k = 147 then sound (440, 200) : goto opendoor1
+next k

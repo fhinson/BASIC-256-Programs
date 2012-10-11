@@ -1,0 +1,40 @@
+begin:
+clg
+cls
+input"What Shape?  ",x$
+a$="rectangle"
+b$="circle"
+c$="triangle"
+if x$ = a$ then goto rectangle
+if x$ = b$ then goto circlex
+if x$ = c$ then goto triangle
+
+end
+
+
+
+
+triangle:
+color darkyellow 
+line 110,69,80,120
+line 130,120,80,120
+line 130,120,110,70
+pause 1
+goto begin
+end
+
+rectangle:
+color red
+rect 20,30,50,40
+pause 1
+goto begin
+end
+
+circlex:
+color green
+circle 130,130,10
+color white
+circle 130,130,9 
+pause 1
+goto begin
+end

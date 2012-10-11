@@ -1,0 +1,70 @@
+ba = 172-172
+bb = 82-172
+bc = 82-172
+bd = 02-172
+be = 01-172
+bf = 02-172
+bg = 01-172
+bh = 01-172
+bi = 37-172
+bj = 37-172
+bk = 01-172
+bl = 01-172
+bm = -18-172
+bn = -25-172
+bo = -95-172
+bp = -25-172
+bq = -75-172
+br = -25-172
+bs = -75-172
+
+noseafter:
+color orange
+dim a(6)
+a[0] = 154
+a[1] = aa
+a[2] = 190
+a[3] = ab
+a[4] = 120
+a[5] = ac
+poly a
+
+chaisseafter:
+color orange
+rect 121, ad, 71, 80
+rect 120, ae, 71, 80
+color white
+rect 121, af, 70, 79
+
+
+wing1after:
+color orange
+dim b(6)
+b[0] = 20
+b[1] = ag
+b[2] = 120
+b[3] = ah
+b[4] = 120
+b[5] = ai
+poly b
+
+
+wing2after:
+dim c(6)
+c[0] = 191
+c[1] = aj
+c[2] = 191
+c[3] = ak
+c[4] = 291
+c[5] = al
+poly c
+
+fuelafter:
+color orange
+rect 126.5, am, 60, 20
+
+smokeafter:
+color gray
+line 155, an, 155, ao
+line 145, ap, 145, aq
+line 165, ar, 165, as

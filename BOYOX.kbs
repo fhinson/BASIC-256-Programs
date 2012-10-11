@@ -1,0 +1,9 @@
+clg
+circle 20,55,10
+color darkorange
+line 20,75,20,60
+color darkred
+rect 10,70,20,25
+line 40,90,0,90
+line 40,130,30,95
+line 10,90,5,130

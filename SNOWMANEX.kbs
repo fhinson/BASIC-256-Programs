@@ -1,0 +1,15 @@
+clg
+color white
+circle 120,60,20
+circle 120,120,40
+circle 120,200,60
+color darkred
+circle 110,50,5
+circle 130,50,5
+color green
+line 10,130,85,130
+line 150,130,225,130
+color orange
+line 120,60,85,60
+color black
+line 135,70,95,70

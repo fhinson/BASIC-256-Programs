@@ -1,0 +1,14 @@
+PRINT "NM               ";
+PRINT "ND               ";
+PRINT "MN               ";
+DIM A$(12)
+A$ = {"JAN", "FEB", "MAR", "APR", "MAY", "JUNE", "JULY", "AUG", "SEPT", "OCT", "NOV", "DEC"}
+DIM M(12)
+M = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}
+FOR T = 0 TO 11
+PRINT A$[T]; 
+PRINT M[T];
+PRINT T+1;
+NEXT T
+
+

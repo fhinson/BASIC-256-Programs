@@ -1,0 +1,12 @@
+clg
+K = 1
+p = 100
+
+for c=1 to 100
+p = p + K
+circle p, 40, 5
+clg
+next c
+ 
+
+

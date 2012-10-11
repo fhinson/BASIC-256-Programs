@@ -1,0 +1,9 @@
+CLS
+FOR G = 0 TO 11
+P = (G+1) * 7
+PRINT 7;
+PRINT "x";
+PRINT (G+1);
+PRINT "=";
+PRINT P
+NEXT G

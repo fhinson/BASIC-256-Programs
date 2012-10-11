@@ -1,0 +1,167 @@
+G = 1
+a = 140
+b = 25
+c = 165
+d = 1
+t = 262
+u = 5
+v = 33
+w = 65
+x = 232
+q = 262
+
+fastgraphics
+start:
+cls
+clg
+
+begin:
+elevator:
+color darkcyan
+rect 43, 0, 213, 400
+color gray
+rect 47, 5 , 205, 290
+
+floors:
+color darkcyan
+rect 85, 5, 3, 310
+rect 43, 75, 213, 3
+rect 43, 150, 213, 3
+rect 43, 220, 213, 3
+
+doors:
+color darkgreen
+rect 140, 5, 50, 70
+color darkorange
+rect 140, 77, 50, 73
+color darkyellow
+rect 140, 152, 50, 68
+color darkpurple
+rect 140, 222, 50, 73
+color white
+line 165, 5, 165, 294
+
+chute:
+color black
+rect 260, 0, 37, 298
+color white
+rect 262, 2, 38, 294
+
+shuttle:
+color blue
+rect t, u, v, w
+
+
+input "Which Floor?  ", h$
+if h$ = "4" then goto opendoor4
+if h$ = "3" then goto opendoor3
+if h$ = "2" then goto opendoor2
+if h$ = "1" then goto moveshuttle1
+return
+end
+moveshuttle1:
+for k = 1 to 232
+color blue
+rect t, u, v, w
+u = u + G
+refresh
+clg
+if k = 232 then goto moveshuttle1a
+gosub start
+next k
+end
+moveshuttle1a:
+for k = 1 to 148
+color blue
+rect q, x, v, w
+q = q - G
+refresh
+clg
+gosub start
+if k = 140 then sound (440, 200) : goto opendoor1
+next k
+end
+
+opendoor1:
+for k = 1 to 26
+color red
+rect 47, 224, 38, 70
+pause 0.05
+refresh
+color gray
+rect 47, 224, 38, 70
+pause 0.05
+refresh
+color white
+rect c, 224, d, 71
+d = d + (2*G)
+c = c - G
+sound (440, 50)
+pause 0.05 
+if k = 26 then cls : print "Floor 1 Door is Open." : pause 1 : goto start
+refresh
+next k
+end
+
+opendoor2:
+for k = 1 to 26
+color red
+rect 47, 152, 38, 70
+pause 0.05
+refresh
+color gray
+rect 47, 152, 38, 70
+pause 0.05
+refresh
+color white
+rect c, 152, d, 71
+d = d + (2*G)
+c = c - G
+sound(440,50)
+pause 0.05
+if k = 26 then cls : print "Floor 2 Door is Open." : pause 1 : goto start
+refresh
+next k
+end
+
+opendoor3:
+for k = 1 to 26
+color red
+rect 47, 78, 38, 70
+pause 0.05
+refresh
+color gray
+rect 47, 78, 38, 70
+pause 0.05
+refresh
+color white
+rect c, 78, d, 71
+d = d + (2*G)
+c = c - G
+sound (440,50)
+pause 0.05
+if k = 26 then cls : print "Floor 3 Door is Open." : pause 1 : goto start
+refresh
+next k
+end
+
+opendoor4:
+for k = 1 to 26
+color red
+rect 47, 5, 38, 70
+pause 0.05
+refresh
+color gray
+rect 47, 5, 38, 70
+pause 0.05
+refresh
+color white
+rect c, 5, d, 71
+d = d + (2*G)
+c = c - G
+sound (440,50)
+pause 0.05
+if k = 26 then cls : print "Floor 4 Door is Open." : pause 1 : goto start
+refresh
+next k
+end

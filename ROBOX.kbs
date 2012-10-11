@@ -1,0 +1,186 @@
+START:
+clg
+cls
+fastgraphics
+A = int(rand*10)
+B = int(rand*10)
+C = int(rand*10)
+D = int(rand*10)
+E = int(rand*10)
+F = int(rand*10)
+G = int(rand*10)
+a = 150
+b = 30
+c = 161
+d = 140
+e = 22
+f = 143
+g = 35
+h = 145
+i = 37
+j = 145
+k = 60
+l = 148
+m = 63
+n = 120
+o = 70
+p = 125
+q = 75
+r = 128
+s = 78
+t = 100
+u = 170
+v = 105
+w = 175
+x = 100
+y = 195
+z = 132
+aa = 164
+ab = 196
+ac = 55
+ad = 90
+ae = 180
+ag = 245
+ah = 65
+ai = 105
+aj = 45
+ak = 255
+al = 235
+ba = 275
+bb = 290
+bc = 245
+bd = 215
+ca = 120
+cb = 90
+cc = 245
+cd = 55
+ce = 105
+cf = 45
+cg = 115
+ch = 65
+ci = 235
+cj = 255
+be = 290
+bf = 290
+yu = 105
+motion:
+for K = 1 to 2
+pause 0.005
+a = a - W
+c = c - W
+d = d - W
+f = f - W
+h = h - W
+j = j - W
+l = l - W
+n = n - W
+p = p - W
+r = r - W
+t = t - W
+v = v - W
+x = x - W
+z = z - W
+aa = aa - W
+ab = ab - W
+ac = ac - W
+ae = ae - W
+ag = ag - W
+ah = ah - W
+aj = aj - W
+ak = ak - W
+al = al - W
+ca = ca - W
+cc = cc - W
+cd = cd - W
+cf = cf - W
+ch = ch - W
+ci = ci - W
+cj = cj - W
+next K
+goto drawall
+end
+drawall:
+head:
+color darkgray
+circle a, b, 28
+color darkgreen
+circle a, b, 25
+color darkgray
+circle a, b, 22
+
+eyes:
+color darkgreen
+circle c, e, 4
+circle d, e, 4
+color darkgray
+circle c, e, 2
+circle d, e, 2
+
+
+mouth:
+color darkgreen
+rect f, g, 15, 10
+color darkgray
+rect h, i, 11, 6
+
+neck:
+color darkgreen
+rect j, k, 10, 10
+color darkgray
+rect l, m, 4, 6
+
+body:
+color darkgreen
+rect n, o, 60, 100
+color darkgray
+rect p, q, 50, 90
+color darkgreen
+rect r, s, 44, 84
+
+base:
+color darkgreen
+rect t, u, 100, 25
+color darkgray
+rect v, w, 90, 15
+
+wheels:
+color darkgreen
+circle x, y, 13
+circle z, y, 13
+circle aa, y, 13
+circle ab, y, 13
+color darkgray
+circle x, y, 9
+circle z, y, 9
+circle aa, y, 9
+circle ab, y, 9
+color darkgreen
+circle x, y, 4
+circle z, y, 4
+circle aa, y, 4
+circle ab, y, 4
+
+arms:
+color darkgreen
+line ac, ad, ca, cb
+line ae, ad, cc, cb
+line ac, ad, cd, ce
+line ag, ad, cc, ce
+
+hands:
+color darkgray
+line ah, ai, cf, ce
+line aj, ai, cf, cg
+line ah, ai, ch, cg
+line ak, ai, ci, ce
+line al, ai, ci, cg
+line ak, ai, cj, cg
+
+blocks:
+color darkcyan
+rect ba, bb, 19, 11
+rect bc, be, 19, 11
+rect bd, bf, 19, 11
+refresh
+clg
+goto motion

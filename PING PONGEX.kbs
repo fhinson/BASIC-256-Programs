@@ -1,0 +1,21 @@
+clg
+color red
+rect 10,100,10,60
+color gray
+line 140,210,140,45
+color darkblue
+rect 290,100,290,60
+
+t = 1
+y = 30
+for c = 1 to 100
+y = y + t
+color green
+circle 30,130,5
+next c
+
+
+
+
+
+

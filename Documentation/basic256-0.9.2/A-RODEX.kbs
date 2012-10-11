@@ -1,0 +1,8 @@
+bs1=3
+bs2=15
+bs3=8
+bs4=17
+bs5=19
+bs6=6
+answer=bs1+bs2+bs3+bs4+bs5+bs6
+print answer

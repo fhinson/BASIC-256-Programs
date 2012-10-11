@@ -1,0 +1,425 @@
+r = 5
+clg
+cls
+gosub milieu
+commence:
+dim colors$(60)
+colors$ = {"Red", "Yellow", "Green", "Blue", "Red", "Yellow", "Green", "Blue", "Red", "Yellow", "Green", "Blue", "Red", "Yellow", "Green", "Blue", "Red", "Yellow", "Green", "Blue", "Red", "Yellow", "Green", "Blue", "Red", "Yellow", "Green", "Blue", "Red", "Yellow", "Green", "Blue", "Red", "Yellow", "Green", "Blue", "Red", "Yellow", "Green", "Blue", "Red", "Yellow", "Green", "Blue", "Red", "Yellow", "Green", "Blue", "Red", "Yellow", "Green", "Blue", "Red", "Yellow", "Green", "Blue"}
+dim roll(6)
+roll = {1, 2, 3, 4, 5, 6}
+
+A = INT(RAND * 5) + 1
+B = INT(RAND * 5) + 1
+C = INT(RAND * 5) + 1
+D = INT(RAND * 5) + 1
+E = INT(RAND * 5) + 1
+F = INT(RAND * 5) + 1
+G = INT(RAND * 5) + 1
+H = INT(RAND * 5) + 1
+I = INT(RAND * 5) + 1
+J = INT(RAND * 5) + 1
+K = INT(RAND * 5) + 1
+L = INT(RAND * 5) + 1
+M = INT(RAND * 5) + 1
+N = INT(RAND * 5) + 1
+O = INT(RAND * 5) + 1
+P = INT(RAND * 5) + 1
+Q = INT(RAND * 5) + 1
+R = INT(RAND * 5) + 1
+S = INT(RAND * 5) + 1
+T = INT(RAND * 5) + 1
+U = INT(RAND * 5) + 1
+V = INT(RAND * 5) + 1
+W = INT(RAND * 5) + 1
+X = INT(RAND * 5) + 1
+Y = INT(RAND * 5) + 1
+Z = INT(RAND * 5) + 1
+
+DIM random(30)
+
+random = {A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z}
+
+gosub ballposi1
+gosub proceed1
+gosub proceed2
+clg
+gosub milieu
+gosub check1
+goto proceed3
+end
+
+milieu:
+color darkgreen
+rect 130, 180, 40, 100
+color darkred
+rect 130, 40, 40, 100
+color darkblue
+rect 170, 140, 100, 40
+color darkyellow
+rect 30, 140, 100, 40
+color white
+line 143, 140, 143, 40
+line 157, 140, 157, 40
+line 143, 280, 143, 180
+line 157, 280, 157, 180
+rem ----------------
+line 170, 153, 270, 153
+line 170, 167, 270, 167
+line 30, 153, 130, 153
+line 30, 167, 130, 167
+rem ----------------
+line 130, 140, 170, 180
+line 170, 140, 130, 180
+a = 60
+b = 200
+c = 50
+d = 190
+for k = 1 to 4
+line 130, a, 170, a
+line 130, b, 170, b
+a = a + 20
+b = b + 20
+next k
+
+for t = 1 to 4
+line c, 140, c, 180
+line d, 140, d, 180
+c = c + 20
+d = d + 20
+next t
+
+color white
+line 110, 140, 130, 120
+line 190, 140, 170, 120
+line 110, 180, 130, 200
+line 190, 180, 170, 200
+return
+end
+
+proceed1:
+print "                                           LUDO"
+print " "
+print "Choose the color you wish to be: Red, Yellow, Green, or Blue."
+pause 3
+z = key
+Print "Who is Red? (Press Spacebar to Respond)"
+pause 2
+if z = 32 then goto next1
+next1:
+Print "Who is Yellow? (Press Spacebar to Respond)"
+pause 2
+if z = 32 then goto next2
+next2: 
+Print "Who is Green? (Press Spacebar to Respond)"
+pause 2
+if z = 32 then goto next3
+next3:
+Print "Who is Blue? (Press Spacebar to Respond)"
+pause 2
+if z = 32 then cls : print "                                           LUDO"
+cls 
+print "                                           LUDO"
+return
+end
+
+ballposi1:
+cx1 = 80
+cy1 = 230
+cx2 = 220
+cy2 = 230
+cx3 = 220
+cy3 = 90
+cx4 = 80
+cy4 = 90
+color green
+circle cx1, cy1, r
+color cyan
+circle cx2, cy2, r
+color red
+circle cx3, cy3, r
+color yellow
+circle cx4, cy4, r
+return
+end
+
+proceed2:
+for ludo = 0 to 25
+pause 2
+cls
+print "                                           LUDO"
+print colors$[ludo];
+print "'s Turn"
+input "Press enter to roll dye.   ", chance$
+print "You got a ";
+print roll[random[ludo]]
+if roll[random[ludo]] = 1 then GOSUB dye1
+if roll[random[ludo]] = 2 then GOSUB dye2
+if roll[random[ludo]] = 3 then GOSUB dye3
+if roll[random[ludo]] = 4 then GOSUB dye4
+if roll[random[ludo]] = 5 then GOSUB dye5
+if roll[random[ludo]] = 6 then GOSUB dye6
+if roll[random[ludo]] <> 6 then print "Sorry you didn't get a 6 : Next person's turn"
+if roll[random[ludo]] = 6 then return
+next ludo
+return
+end
+
+proceed3:
+for ludo2 = ludo to ludo
+first = ludo 
+number = roll[random[ludo2]]
+pause 2
+cls
+print "                                           LUDO"
+print colors$[ludo2];
+print "'s Turn"
+input "You must roll again. Press enter to roll dye.   ", chance$
+print roll[random[ludo2]] 
+if roll[random[ludo2]] = 1 then GOSUB dye1
+if roll[random[ludo2]] = 2 then GOSUB dye2
+if roll[random[ludo2]] = 3 then GOSUB dye3
+if roll[random[ludo2]] = 4 then GOSUB dye4
+if roll[random[ludo2]] = 5 then GOSUB dye5
+if roll[random[ludo2]] = 6 then GOSUB dye6
+number = roll[random[ludo2]]
+count = number
+dim sposx1(50)
+dim sposx2(50)
+dim sposx3(50)
+dim sposx4(50)
+dim sposy1(50)
+dim sposy2(50)
+dim sposy3(50)
+dim sposy4(50)
+sposx1={136,136,136,136,136,120,100,80,60,40,40,40,60,80,100,120,136,136,136,136,136,150,164,164,164,164,164,180,200,220,240,260,260,260,240,220,200,180,164,164,164,164,164,150}
+rem -----------------------------------------------------------------------------------
+sposx2={260,240,220,200,180,164,164,164,164,164,150,136,136,136,136,136,120,100,80,60,40,40,40,60,80,100,120,136,136,136,136,136,150,164,164,164,164,164,180,200,220,240,260,260}
+rem -----------------------------------------------------------------------------------
+sposx3={164,164,164,164,164,180,200,220,240,260,260,260,240,220,200,180,164,164,164,164,164,150,136,136,136,136,136,120,100,80,60,40,40,40,60,80,100,120,136,136,136,136,136,150}
+rem -----------------------------------------------------------------------------------
+sposx4={40,60,80,100,120,136,136,136,136,136,150,164,164,164,164,164,180,200,220,240,260,260,260,240,220,200,180,164,164,164,164,164,150,136,136,136,136,136,120,100,80,60,40,40}
+rem -----------------------------------------------------------------------------------
+sposy1={270,250,230,210,190,173,173,173,173,173,160,147,147,147,147,147,130,110,90,70,50,50,50,70,90,110,130,146,146,146,146,146,160,173,173,173,173,173,190,210,230,250,270,270}
+rem -----------------------------------------------------------------------------------
+sposy2={173,173,173,173,173,190,210,230,250,270,270,270,250,230,210,190,173,173,173,173,173,160,147,147,147,147,147,130,110,90,70,50,50,50,70,90,110,130,146,146,146,146,146,160}
+rem -----------------------------------------------------------------------------------
+sposy3={50,70,90,110,130,146,146,146,146,146,160,173,173,173,173,173,190,210,230,250,270,270,270,250,230,210,190,173,173,173,173,173,160,147,147,147,147,147,130,110,90,70,50,50}
+rem -----------------------------------------------------------------------------------
+sposy4={147,147,147,147,147,130,110,90,70,50,50,50,70,90,110,130,146,146,146,146,146,160,173,173,173,173,173,190,210,230,250,270,270,270,250,230,210,190,173,173,173,173,173,160}
+rem -----------------------------------------------------------------------------------
+cx1 = sposx1[count]
+cy1 = sposy1[count]
+cx2 = sposx2[count]
+cy2 = sposy2[count]
+cx3 = sposx3[count]
+cy3 = sposy3[count]
+cx4 = sposx4[count]
+cy4 = sposy4[count]
+gosub milieu
+gosub check2
+next ludo2
+next k
+return
+end
+
+proceed4:
+for ludo3 = first to 25
+pause 2
+cls
+print "                                           LUDO"
+print colors$[ludo];
+print "'s Turn"
+input "Press enter to roll dye.   ", chance$
+print "You got a ";
+print roll[random[ludo]]
+if roll[random[ludo]] = 1 then GOSUB dye1
+if roll[random[ludo]] = 2 then GOSUB dye2
+if roll[random[ludo]] = 3 then GOSUB dye3
+if roll[random[ludo]] = 4 then GOSUB dye4
+if roll[random[ludo]] = 5 then GOSUB dye5
+if roll[random[ludo]] = 6 then GOSUB dye6
+if roll[random[ludo]] <> 6 then print "Sorry you didn't get a 6 : Next person's turn"
+if roll[random[ludo]] = 6 then return
+next ludo
+return
+end
+
+check1:
+if colors$[ludo] = "Green" then gosub logic1
+if colors$[ludo] = "Blue" then gosub logic2
+if colors$[ludo] = "Red" then gosub logic3
+if colors$[ludo] = "Yellow" then gosub logic4
+return
+end
+
+check2:
+if colors$[ludo] = "Green" then gosub logic5
+if colors$[ludo] = "Blue" then gosub logic6
+if colors$[ludo] = "Red" then gosub logic7
+if colors$[ludo] = "Yellow" then gosub logic8
+return
+end
+
+logic5:
+color green
+circle cx1, cy1, r
+return
+end
+
+logic6:
+color cyan
+circle cx2, cy2, r
+return
+end
+
+logic7:
+color red
+circle cx3, cy3, r
+return
+end
+
+logic8:
+color yellow
+circle cx4, cy4, r
+return
+end
+logic1:
+cx1 = 136
+cy1 = 270
+cx2 = 220
+cy2 = 230
+cx3 = 220
+cy3 = 90
+cx4 = 80
+cy4 = 90
+color green
+circle cx1, cy1, r
+color cyan
+circle cx2, cy2, r
+color red
+circle cx3, cy3, r
+color yellow
+circle cx4, cy4, r
+return
+end
+logic2:
+cx1 = 80
+cy1 = 230
+cx2 = 260
+cy2 = 174
+cx3 = 220
+cy3 = 90
+cx4 = 80
+cy4 = 90
+color green
+circle cx1, cy1, r
+color cyan
+circle cx2, cy2, r
+color red
+circle cx3, cy3, r
+color yellow
+circle cx4, cy4, r
+return
+end
+logic3:
+cx1 = 80
+cy1 = 230
+cx2 = 220
+cy2 = 230
+cx3 = 164
+cy3 = 50
+cx4 = 80
+cy4 = 90
+color green
+circle cx1, cy1, r
+color cyan
+circle cx2, cy2, r
+color red
+circle cx3, cy3, r
+color yellow
+circle cx4, cy4, r
+return
+end
+logic4:
+cx1 = 80
+cy1 = 230
+cx2 = 220
+cy2 = 230
+cx3 = 220
+cy3 = 90
+cx4 = 40
+cy4 = 146
+color green
+circle cx1, cy1, r
+color cyan
+circle cx2, cy2, r
+color red
+circle cx3, cy3, r
+color yellow
+circle cx4, cy4, r
+return
+end
+
+
+dye1:
+color white
+rect 20,30,40,40
+color black
+circle 39,48,7
+RETURN
+end
+
+dye2:
+color white 
+rect 20,30,40,40
+color black
+circle 32,48,6
+circle 46,48,6
+RETURN
+end
+
+dye3:
+color white 
+rect 20,30,40,40
+color black
+circle 26,36,5
+circle 36,48,5
+circle 46,60,5
+RETURN
+end
+
+dye4:
+color white
+rect 20,30,40,40
+color black
+circle 26,36,5
+circle 51,36,5
+circle 26,58,5
+circle 51,58,5
+RETURN
+end
+
+dye5:
+color white 
+rect 20,30,40,40
+color black
+circle 26,36,5
+circle 51,36,5
+circle 26,58,5
+circle 51,58,5
+circle 39,48,5
+RETURN
+end
+
+dye6:
+color white 
+rect 20,30,40,40
+color black
+circle 26,36,5
+circle 38,36,5
+circle 51,36,5
+circle 26,58,5
+circle 38,58,5
+circle 51,58,5
+RETURN
+end

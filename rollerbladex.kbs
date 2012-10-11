@@ -1,0 +1,78 @@
+clg
+
+j = 1
+p = 120
+k = 110
+l = 135
+i = 150
+v = 90
+f = 122
+s = 120
+d = 130
+m = 110
+n = 80
+t = 20
+w = 80
+x = 160
+z = 226
+r = 80
+o = 160
+y = 190
+h = 160
+q = 110
+a = 80
+e = 190
+g = 100
+for c = 1 to 60
+p = p + j
+k = k + j
+l = l + j
+i = i + j
+v = v + j
+f = f + j
+s = s + j
+d = d + j
+m = m + j
+n = n + j
+t = t + j
+w = w + j
+x = x + j
+z = z + j
+r = r + j
+o = o + j
+y = y + j
+h = h + j
+q = q + j
+a = a + j
+e = e + j
+g = g + j
+color darkred
+circle p,70,19
+color black
+circle k,63,4 
+circle l,63,4
+line i,50,v,50
+color red
+line f,73,f,61
+color darkred
+line s,80,s,110
+color red
+line d,80,d,80
+rect m,110,n,60
+color darkred
+line t,140,w,140
+line x,140,z,140
+color gray
+line r,210,o,170
+line y,210,y,170
+line h,210,q,210
+line q,210,a,210
+color darkgreen
+circle e,220,19
+circle g,220,19
+next c
+
+
+
+
+

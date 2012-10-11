@@ -1,0 +1,344 @@
+TRYA = 1
+TRYB = 1
+TRYC = 1
+TRYD = 1
+TRYE = 1
+COLOR RED
+PRINT "^mastermind^"
+print " "
+START:
+
+A = INT(RAND*5) + 1
+B = INT(RAND*5) + 1
+C = INT(RAND*5) + 1
+D = INT(RAND*5) + 1
+DIM RIGHT$(6)
+RIGHT$ = {"G","Y","B","P","C","0"}
+
+r = 8
+a = 53
+t = 53
+b =103
+c = 153
+d = 203
+e = 253
+rem ------
+DIM A1(15)
+DIM A2(15)
+DIM A3(15)
+DIM A4(15)
+DIM A5(15)
+A1 = {53,103,153,203,253,53,103,153,203,253}
+A2 = {42, 42, 42, 42, 42, 192, 192, 192, 192, 192}
+A3 = {67,67,67,67,67,217,217,217,217,217}
+A4 = {92,92,92,92,92,242,242,242,242,242}
+A5 = {117,117,117,117,117,267,267,267,267,267}
+dim A6(15)
+dim A7(15)
+A6 = {38, 88, 138, 188, 238, 38, 88, 138, 188, 238}
+A7 = {38, 88, 138, 188, 238, 38, 88, 138, 188, 238}
+j = 38
+k = 38
+aa = 38
+ab = 38
+l = 137
+m = 147
+dim A8(15)
+dim A9(15)
+A8 = {137,137,137,137,137,162,162,162,162,162}
+A9 = {147,147,147,147,147,172,172,172,172,172}
+n = 2
+rem ------
+L = 36.5
+R = 30
+rem ----
+f = 192
+g = 217
+h = 242
+i = 267
+rem ----
+fa = f - 150
+ga = g - 150
+ha = h - 150
+ia = i - 150
+
+clg
+print "Caps Sensistive"
+PRINT "G = GREEN"
+PRINT "Y = YELLOW"
+PRINT "B = BLUE"
+PRINT "P = PURPLE"
+PRINT "C = CYAN"
+PRINT "O = ORANGE"
+print " "
+background:
+color white
+rect 10, 10, 300, 10
+rect 10, 10, 10, 300
+rect 289, 10, 10, 300
+rect 10, 289, 290, 10
+color black
+rect 10, 10, 299, 9
+rect 10, 10, 9, 299
+rect 290, 10, 10, 300
+rect 10, 290, 290, 10
+LINE 10, 154, 300, 154
+boxes:
+FOR K = 1 TO 5
+rect L, R, 35, 100
+rect L, R+150, 35, 100
+L = L + 50
+NEXT K
+
+REM NOW STARTING LOGICAL SECTION OF PROGRAM -------------------------------
+IT:
+FOR Z = 1 TO 10
+PRINT "YOU ARE IN BLOCK ";
+PRINT Z
+input "FIRST COLOR?   ", CA$
+input"SECOND COLOR?   ",CB$
+input "THIRD COLOR?   ",CC$
+input "FOURTH COLOR?   ",CD$
+IF CA$ = RIGHT$[A] AND CB$ = RIGHT$[B] AND CC$ = RIGHT$[C] AND CD$ = RIGHT$[D] THEN PRINT "CONGRATS! YOU SOLVED THE PUZZLE!" : END
+IF CA$ = RIGHT$[A] OR CB$ = RIGHT$[A] OR CC$ = RIGHT$[A] OR CD$ = RIGHT$[A] THEN TRYA = 1 : GOTO NEXTONE
+TRYA = 0
+NEXTONE:
+IF CA$ = RIGHT$[B] OR CB$ = RIGHT$[B] OR CC$ = RIGHT$[B] OR CD$ = RIGHT$[B] THEN TRYB = 1 : GOTO NEXTTWO
+TRYB = 0
+NEXTTWO:
+IF CA$ = RIGHT$[C] OR CB$ = RIGHT$[C] OR CC$ = RIGHT$[C] OR CD$ = RIGHT$[C] THEN TRYC = 1 : GOTO NEXTTHREE
+TRYC = 0
+NEXTTHREE:
+IF CA$ = RIGHT$[D] OR CB$ = RIGHT$[D] OR CC$ = RIGHT$[D] OR CD$ = RIGHT$[D] THEN TRYD = 1 : GOTO CONTINUATION
+TRYD = 0
+IF CA$ = RIGHT$[A] OR CB$ = RIGHT$[B] OR CC$ = RIGHT$[C] OR CD$ = RIGHT$[D] THEN TRYE = 1
+IF CA$ = RIGHT$[A] AND CB$ = RIGHT$[B] THEN TRYE = 2
+IF CA$ = RIGHT$[A] AND CB$ = RIGHT$[B] AND CC$ = RIGHT$[C] THEN TRYE = 3
+IF CA$ = RIGHT$[A] AND CC$ = RIGHT$[C] AND CD$ = RIGHT$[D] THEN TRYE = 3
+IF CA$ = RIGHT$[A] AND CB$ = RIGHT$[B] AND CD$ = RIGHT$[D] THEN TRYE = 3
+IF CB$ = RIGHT$[B] AND CC$ = RIGHT$[C] THEN TRYE = 2
+IF CB$ = RIGHT$[B] AND CC$ = RIGHT$[C] AND CD$ = RIGHT$[D] THEN TRYE = 3
+IF CC$ = RIGHT$[C] AND CD$ = RIGHT$[D] THEN TRYE = 2
+IF CA$ = RIGHT$[A] AND CD$ = RIGHT$[D] THEN TRYE = 2
+IF CB$ = RIGHT$[B] AND CD$ = RIGHT$[D] THEN TRYE = 2
+IF CC$ = RIGHT$[C] AND CD$ = RIGHT$[D] THEN TRYE = 2
+CONTINUATION:
+FINAL = TRYA + TRYB + TRYC + TRYD
+goto check
+next1:
+goto check2
+next2:
+j = A6[Z]
+k = A7[Z]
+l = A8[Z]
+m = A9[Z]
+TEST1A:
+if CA$ = "G" then goto A1A
+TEST1B:
+if CA$ = "Y" then goto A1B
+TEST1C:
+if CA$ = "B" then goto A1C
+TEST1D:
+if CA$ = "P" then goto A1D
+TEST1E:
+if CA$ = "C" then goto A1E
+TEST1F:
+if CA$ = "O" then goto A1F
+REM --------
+TEST2A:
+if CB$ = "G" then goto A2A
+TEST2B:
+if CB$ = "Y" then goto A2B
+TEST2C:
+if CB$ = "B" then goto A2C
+TEST2D:
+if CB$ = "P" then goto A2D
+TEST2E:
+if CB$ = "C" then goto A2E
+TEST2F:
+if CB$ = "O" then goto A2F
+REM --------
+TEST3A:
+if CC$ = "G" then goto A3A
+TEST3B:
+if CC$ = "Y" then goto A3B
+TEST3C:
+if CC$ = "B" then goto A3C
+TEST3D:
+if CC$ = "P" then goto A3D
+TEST3E:
+if CC$ = "C" then goto A3E
+TEST3F:
+if CC$ = "O" then goto A3F
+REM --------
+TEST4A:
+if CD$ = "G" then goto A4A
+TEST4B:
+if CD$ = "Y" then goto A4B
+TEST4C:
+if CD$ = "B" then goto A4C
+TEST4D:
+if CD$ = "P" then goto A4D
+TEST4E:
+if CD$ = "C" then goto A4E
+TEST4F:
+if CD$ = "O" then goto A4F
+IF Z =10 THEN CLS : PRINT "SORRY, YOU LOSE!" : END
+a = A1[Z]
+fa = A2[Z]
+ga = A3[Z]
+ha = A4[Z]
+ia = A5[Z]
+CLS
+NEXT Z
+END
+
+BOX1COLOR1:
+A1A:
+color green
+circle a, fa, r
+GOTO TEST1B
+end
+A1B:
+color yellow
+circle a, fa, r
+GOTO TEST1C
+end
+A1C:
+color blue
+circle a, fa, r
+GOTO TEST1D
+end
+A1D:
+color purple
+circle a, fa, r
+GOTO TEST1E
+end
+A1E:
+color darkcyan
+circle a, fa, r
+GOTO TEST1F
+end
+A1F:
+color orange
+circle a, fa, r
+GOTO TEST2A
+end
+
+BOX1COLOR2:
+A2A:
+color green
+circle a, ga, r
+GOTO TEST2B
+end
+A2B:
+color yellow
+circle a, ga, r
+GOTO TEST2C
+end
+A2C:
+color blue
+circle a, ga, r
+GOTO TEST2D
+end
+A2D:
+color purple
+circle a, ga, r
+GOTO TEST2E
+end
+A2E:
+color darkcyan
+circle a, ga, r
+GOTO TEST2F
+end
+A2F:
+color orange
+circle a, ga, r
+GOTO TEST3A
+end
+ 
+BOX1COLOR3:
+A3A:
+color green
+circle a, ha, r
+GOTO TEST3B
+end
+A3B:
+color yellow
+circle a, ha, r
+GOTO TEST3C
+end
+A3C:
+color blue
+circle a, ha, r
+GOTO TEST3D
+end
+A3D:
+color purple
+circle a, ha, r
+GOTO TEST3E
+end
+A3E:
+color darkcyan
+circle a, ha, r
+GOTO TEST3F
+end
+A3F:
+color orange
+circle a, ha, r
+GOTO TEST4A
+end
+
+BOX1COLOR4:
+A4A:
+color green
+circle a, ia, r
+GOTO TEST4B
+end
+A4B:
+color yellow
+circle a, ia, r
+GOTO TEST4C
+end
+A4C:
+color blue
+circle a, ia, r
+GOTO TEST4D
+end
+A4D:
+color purple
+circle a, ia, r
+GOTO TEST4E
+end
+A4E:
+color darkcyan
+circle a, ia, r
+GOTO TEST4F
+end
+A4F:
+color orange
+circle a, ia, r
+end
+
+check:
+color white
+for i = 0 to FINAL
+circle j, l,  n
+j = j + 10
+next i
+goto next1
+end
+check2:
+color red
+for i = 1 to TRYE
+circle k, l, n
+k = k + 10
+next i
+goto next2
+end
+rem -------
+color red
+circle j, l,  n
+circle k, l,  n
+circle j, m,  n
+circle k, m,  n

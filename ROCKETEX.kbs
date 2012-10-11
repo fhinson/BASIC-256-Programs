@@ -1,0 +1,149 @@
+clg
+nose:
+color orange
+dim a(6)
+a[0] = 154
+a[1] = 13.33333333333
+a[2] = 190
+a[3] = 100
+a[4] = 120
+a[5] = 100
+poly a
+
+
+chaisse:
+color orange
+rect 121, 102, 71, 80
+rect 120, 101, 71, 80
+color white
+rect 121, 102, 70, 79
+
+
+wing1:
+color orange
+dim b(6)
+b[0] = 20
+b[1] = 181
+b[2] = 120
+b[3] = 181
+b[4] = 120
+b[5] = 137
+poly b
+
+
+wing2:
+dim c(6)
+c[0] = 191
+c[1] = 131
+c[2] = 191
+c[3] = 181
+c[4] = 291
+c[5] = 181
+poly c
+
+fuel:
+color orange
+rect 126.5, 182, 60, 20
+
+smoke:
+color gray
+line 155, 280, 155, 210
+line 145, 260, 145, 210
+line 165, 260, 165, 210
+goto countdown
+end
+
+flashinglights:
+
+for t = 1 to 1000
+color red
+circle 35, 285, 10
+pause 0.5
+color blue
+circle 35, 285, 10
+pause 0.5
+
+color white
+circle 155, 285, 10
+pause 0.5
+color orange
+circle 155, 285, 10
+pause 0.5
+
+color yellow
+circle 275, 285, 10
+pause 0.5
+color green
+circle 275, 285, 10
+pause 0.5
+goto countdown
+next t
+
+countdown:
+print "20"
+pause 1
+cls
+print "19"
+pause 1
+cls
+print "18"
+pause 1
+cls
+print "17"
+pause 1
+cls
+print "16"
+pause 1
+cls
+print "15"
+pause 1
+cls
+print "14"
+pause 1
+cls
+print "13"
+pause 1
+cls
+print "12"
+pause 1
+cls
+print "11"
+pause 1
+cls
+print "10"
+pause 1
+cls
+print "9"
+pause 1
+cls
+print "8"
+pause 1
+cls
+print "7"
+pause 1
+cls
+print "6"
+pause 1
+cls
+print "5"
+pause 1
+cls
+print "4"
+pause 1
+cls
+print "3"
+pause 1
+cls
+print "2"
+pause 1
+cls
+print "1"
+pause 1
+cls
+print "0"
+pause 1
+cls
+print "NOW LAUNCHING"
+
+launchrocket:
+

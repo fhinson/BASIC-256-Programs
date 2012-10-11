@@ -1,0 +1,64 @@
+clg
+light:
+color black
+rect 90, 70, 100, 150
+color white
+circle 140, 185, 14
+color white
+circle 140, 145, 14
+color white
+circle 140, 105, 14
+goto greenlight
+end
+
+light2:
+color black
+rect 90, 70, 100, 150
+color white
+circle 140, 185, 14
+color white
+circle 140, 145, 14
+color white
+circle 140, 105, 14
+goto yellowlight
+end
+
+light3:
+color black
+rect 90, 70, 100, 150
+color white
+circle 140, 185, 14
+color white
+circle 140, 145, 14
+color white
+circle 140, 105, 14
+goto redlight
+end
+
+greenlight:
+color green
+circle 140, 185, 14
+pause 6
+clg
+goto light2
+
+end
+
+yellowlight:
+color yellow
+circle 140, 145, 14
+for b = 1 to 40
+sound (144, 90)
+next b
+pause 5
+clg
+goto light3
+end
+
+redlight:
+color red
+circle 140, 105, 14
+pause 6
+clg
+goto light
+end

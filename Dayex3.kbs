@@ -1,0 +1,66 @@
+start:
+
+cls
+
+print "? / ? / ?"
+
+input "First number of date? ", a$
+rem month
+input "Second number of date? ", b$
+rem date
+input "Third number of date? ", c$
+rem year
+cls
+
+print a$; 
+print "/";
+print b$;
+print "/";
+print c$
+
+input "Is this correct? Type yes or no                                               ", f$
+
+if f$ = "no" then goto start
+if f$ = "yes" then goto continue
+continue:
+dim d$(100)
+
+d$ = {"Thursday", "Friday", "Saturday", "Sunday", "Monday", "Tuesday", "Wednesday"}
+
+a = int(a$)
+b = int(b$)
+
+V = a-1
+
+dim n(12)
+dim m(13)
+n = {31, 28, 30, 30, 31, 30, 31, 31, 30, 31, 30, 31}
+aa = n[0]
+ab = n[0] + n[1] 
+ac = n[0] + n[1] + n[2] 
+ad = n[0] + n[1] + n[2] + n[3] 
+ae = n[0] + n[1] + n[2] + n[3] + n[4] 
+af = n[0] + n[1] + n[2] + n[3] + n[4] + n[5] 
+ag = n[0] + n[1] + n[2] + n[3] + n[4] + n[5] + n[6] 
+ah = n[0] + n[1] + n[2] + n[3] + n[4] + n[5] + n[6] + n[7] 
+ai = n[0] + n[1] + n[2] + n[3] + n[4] + n[5] + n[6] + n[7] + n[8] 
+aj = n[0] + n[1] + n[2] + n[3] + n[4] + n[5] + n[6] + n[7] + n[8] + n[9]
+ak = n[0] + n[1] + n[2] + n[3] + n[4] + n[5] + n[6] + n[7] + n[8] + n[9] + n[10]
+al = n[0] + n[1] + n[2] + n[3] + n[4] + n[5] + n[6] + n[7] + n[8] + n[9] + n[10] + n[11]
+rem -----------
+m = {0,aa,ab,ac,ad,ae,af,ag,ah,ai,aj,ak,al}
+
+D = m[V] + b
+
+z = 7 
+
+for s = 1 to 100
+if D > (z*s) and D < ((z*(s+1))+1) then D = D - (z*s) : goto conclude
+next s
+
+conclude:
+F = D-1
+
+cls
+print "The day is ";
+print d$[F]

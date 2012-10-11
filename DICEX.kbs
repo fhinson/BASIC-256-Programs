@@ -1,0 +1,98 @@
+clg
+begin:
+cls
+
+input "What number dye?  ", a$
+
+h$ = "1"
+i$ = "2"
+j$ = "3"
+k$ = "4"
+l$ = "5"
+m$ = "6"
+
+if h$ = a$ then goto dye1
+if i$ = a$ then goto dye2
+if j$ = a$ then goto dye3
+if k$ = a$ then goto dye4
+if l$ = a$ then goto dye5
+if m$ = a$ then goto dye6 
+goto whatif
+
+
+
+end
+
+whatif:
+print "Sorry, but this is not a valid number."
+end
+
+
+
+dye1:
+color orange
+rect 70, 100, 150, 100
+color white
+circle 144, 150, 15
+
+goto begin
+end
+
+dye2:
+color orange
+rect 70, 100, 150, 100
+color white
+circle 110, 150, 15
+circle 178, 150, 15
+
+goto begin
+end
+
+dye3:
+color orange
+rect 70, 100, 150, 100
+color white
+circle 90, 175, 13
+circle 144, 150, 13
+circle 200, 121, 13
+
+goto begin
+end
+
+dye4:
+color orange
+rect 70, 100, 150, 100
+color white
+circle 100, 125, 14
+circle 100, 175, 14
+circle 185, 125, 14
+circle 185, 175, 14
+
+goto begin
+end
+
+dye5:
+color orange
+rect 70, 100, 150, 100
+color white
+circle 100, 125, 14
+circle 100, 175, 14
+circle 185, 125, 14
+circle 185, 175, 14
+circle 142.5, 150, 14
+
+goto begin
+end
+
+dye6:
+color orange
+rect 70, 100, 150, 100
+color white
+circle 103, 150, 12.5
+circle 187, 150, 12.5
+circle 103, 180, 12.5
+circle 187, 180, 12.5
+circle 103, 120, 12.5
+circle 187, 120, 12.5
+
+goto begin

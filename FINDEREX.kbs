@@ -1,0 +1,41 @@
+input "What Number?  ", x$
+x = int(x$)
+for g = 0 to 900000 step 100000
+for e = 0 to 90000 step 10000
+for d = 0 to 9000 step 1000
+for c = 0 to 900 step 100
+for b = 0 to 90 step 10
+for a = 0 to 9
+f = a + b + c + d + e + g
+if f = x then goto prowess
+next a
+next b
+next c
+next d
+next e
+next g
+
+
+end
+prowess:
+h = 0
+if g > 0 then h = g/10000 
+i = e/10000
+
+j = h + i
+
+k = d/100
+l = c/100
+
+m = k + l
+
+n = b + a
+
+print "Month is ";
+print j
+print "Day is ";
+print m
+print "Year is ";
+print n
+
+

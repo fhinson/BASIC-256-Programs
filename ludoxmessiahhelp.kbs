@@ -1,0 +1,63 @@
+r=2
+clg
+color darkgreen
+rect 130, 180, 40, 100
+color darkred
+rect 130, 40, 40, 100
+color darkblue
+rect 170, 140, 100, 40
+color darkyellow
+rect 30, 140, 100, 40
+color white
+line 143, 140, 143, 40
+line 157, 140, 157, 40
+line 143, 280, 143, 180
+line 157, 280, 157, 180
+rem ----------------
+line 170, 153, 270, 153
+line 170, 167, 270, 167
+line 30, 153, 130, 153
+line 30, 167, 130, 167
+rem ----------------
+line 130, 140, 170, 180
+line 170, 140, 130, 180
+a = 60
+b = 200
+c = 50
+d = 190
+for k = 1 to 4
+line 130, a, 170, a
+line 130, b, 170, b
+a = a + 20
+b = b + 20
+next k
+
+for t = 1 to 4
+line c, 140, c, 180
+line d, 140, d, 180
+c = c + 20
+d = d + 20
+next t
+
+color white
+line 110, 140, 130, 120
+line 190, 140, 170, 120
+line 110, 180, 130, 200
+line 190, 180, 170, 200
+
+cx1 = 80
+cy1 = 230
+cx2 = 260
+cy2 = 173
+cx3 = 164
+cy3 = 50
+cx4 = 60
+cy4 = 173
+color green
+circle cx1, cy1, r
+color cyan
+circle cx2, cy2, r
+color red
+circle cx3, cy3, r
+color yellow
+circle cx4, cy4, r

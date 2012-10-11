@@ -1,0 +1,107 @@
+
+M = int(rand*4)
+V = M + 1
+J = int(rand*4)
+X = J + 1
+
+a = 200
+b = 200
+c = 200
+d = 200
+e = 200
+f = 200
+g = 100
+h = 100
+i = 100
+k = 100
+clg
+fastgraphics
+
+
+
+
+background:
+color gray
+rect 0,0,300,300 
+
+body:
+color darkcyan
+line 140, 50, 140, 150
+
+leg1:
+line 140, 150, 190, a
+
+leg2:
+line 140, 150, 90, b
+
+head:
+color darkcyan
+circle 140, 30, 20
+color white
+circle 140, 30, 19
+
+feet:
+color darkcyan
+line 69, c, 89, d
+line 189, e, 209, f
+
+arms:
+color darkcyan
+line 69, g, 139, h
+line 139, i, 209, k
+
+
+eyes:
+color darkcyan
+circle 132, 25, 3
+circle 148, 25, 3
+color white
+circle 132, 25, 1
+circle 148, 25, 1
+
+nose:
+color darkcyan
+line 140, 32, 145, 37
+line 139, 37, 144, 37
+
+mouth:
+line 135, 45, 144, 45 
+
+ears:
+line 120, 25, 115, 20
+line 114, 20, 120, 32
+line 160, 25, 165, 20
+line 160, 32, 165, 20
+
+hair:
+line 130, 7, 130, 12
+line 150, 7, 150, 12
+line 140, 5, 140, 10
+
+
+
+for r = 1 to 1000
+motion:
+a = a + V
+b = b + V
+c = c + V
+d = d + V
+e = e + V
+f = f + V
+g = g + V
+h = h + V
+i = i + V
+k = k + V
+rem --------
+a = a - X
+b = b - X
+c = c - X
+d = d - X
+e = e - X
+f = f - X
+g = g - X
+h = h - X
+i = i - X
+k = k - X
+next r
+refresh

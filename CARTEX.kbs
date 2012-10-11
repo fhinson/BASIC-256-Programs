@@ -1,0 +1,31 @@
+clg
+
+clg
+d = 1
+v = 10
+s = 140
+a = 10
+t = 150
+f = 40
+m = 120
+for g = 1 to 40
+v = v + d
+s = s + d
+a = a + d
+t = t + d
+f = f + d
+m = m + d
+color red
+rect v,70,s,80
+color black
+line a,150,a,30
+line t,150,t,30
+color green
+circle f,160,20
+circle m,160,20
+clg
+next g
+
+
+
+

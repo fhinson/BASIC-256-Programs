@@ -1,0 +1,42 @@
+clg
+
+c = 20
+rem move ball
+ 
+for c = 20 to 120
+
+rem make pillar
+color red
+rect 0,100,220,335
+color darkgreen
+line 180,235,5,235
+
+rem make person
+circle 20,35,10
+color darkorange
+line 20,55,20,40
+color darkred
+rect 10,50,20,25
+line 40,60,0,60
+line 40,100,30,65
+line 10,60,5,100
+
+rem make ball
+color black
+circle c,80,20
+
+ 
+next c
+ 
+d = 40
+for d = 120 to 215
+ 
+rem make pillar
+color red
+rect 20,100,80,135
+color darkgreen
+line 180,235,5,235
+color black
+circle 120,d,20
+ 
+next d

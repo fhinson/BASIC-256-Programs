@@ -1,0 +1,17 @@
+clg
+h = 1
+n = 130
+r = 110
+clg
+
+
+
+for f = 1 to 15
+n = n + h
+r = r + h
+
+color red
+circle 40,10,50
+line 40,10,90,10
+clg
+next f

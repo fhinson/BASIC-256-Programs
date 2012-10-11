@@ -1,0 +1,662 @@
+BBBBBBCOLOR RED
+PRINT "^mastermind^"
+print " "
+START:
+r = 8
+a = 53
+b =103
+c = 153
+d = 203
+e = 253
+L = 36.5
+R = 30
+rem ----
+f = 192
+g = 217
+h = 242
+i = 267
+rem ----
+fa = f - 150
+ga = g - 150
+ha = h - 150
+ia = i - 150
+
+clg
+print "Caps Sensistive"
+PRINT "G = GREEN"
+PRINT "Y = YELLOW"
+PRINT "B = BLUE"
+PRINT "R = RED"
+PRINT "W = WHITE"
+PRINT "O = ORANGE"
+print " "
+background:
+color white
+rect 10, 10, 300, 10
+rect 10, 10, 10, 300
+rect 289, 10, 10, 300
+rect 10, 289, 290, 10
+color black
+rect 10, 10, 299, 9
+rect 10, 10, 9, 299
+rect 290, 10, 10, 300
+rect 10, 290, 290, 10
+
+boxes:
+FOR K = 1 TO 5
+rect L, R, 35, 100
+rect L, R+150, 35, 100
+L = L + 50
+NEXT K
+
+REM NOW STARTING LOGICAL SECTION OF PROGRAM -------------------------------
+
+input "FIRST COLOR?   ",CA$
+input"SECOND COLOR?   ",CB$
+input "THIRD COLOR?   ",CC$
+input "FOURTH COLOR?   ",CD$
+CLS
+IF CA$ = "B" AND CB$ = "O" AND CC$ = "G" AND CD$ = "W" THEN PRINT "CONGRATS! YOU SOLVED THE PUZZLE!" : END
+IF CA$ = "B" THEN PRINT "1 CORRECT COLOR"
+IF CB$ = "B" THEN PRINT "1 CORRECT COLOR"
+IF CC$ = "B" THEN PRINT "1 CORRECT COLOR"
+IF CD$ = "B" THEN PRINT "1 CORRECT COLOR"
+IF CA$ = "W" THEN PRINT "1 CORRECT COLOR"
+IF CB$ = "W" THEN PRINT "1 CORRECT COLOR"
+IF CC$ = "W" THEN PRINT "1 CORRECT COLOR"
+IF CD$ = "W" THEN PRINT "1 CORRECT COLOR"
+IF CA$ = "O" THEN PRINT "1 CORRECT COLOR"
+IF CB$ = "O" THEN PRINT "1 CORRECT COLOR"
+IF CC$ = "O" THEN PRINT "1 CORRECT COLOR"
+IF CD$ = "O" THEN PRINT "1 CORRECT COLOR"
+IF CA$ = "G" THEN PRINT "1 CORRECT COLOR"
+IF CB$ = "G" THEN PRINT "1 CORRECT COLOR"
+IF CC$ = "G" THEN PRINT "1 CORRECT COLOR"
+IF CD$ = "G" THEN PRINT "1 CORRECT COLOR"
+IF CA$ = "B" THEN PRINT "1 CORRECT POSITION"
+IF CB$ = "O" THEN PRINT "1 CORRECT POSITION"
+IF CC$ = "G" THEN PRINT "1 CORRECT POSITION"
+IF CD$ = "W" THEN PRINT "1 CORRECT POSITION"
+
+print "---------------------------------------"
+TEST1A:
+if CA$ = "G" then goto A1A
+TEST1B:
+if CA$ = "Y" then goto A1B
+TEST1C:
+if CA$ = "B" then goto A1C
+TEST1D:
+if CA$ = "R" then goto A1D
+TEST1E:
+if CA$ = "W" then goto A1E
+TEST1F:
+if CA$ = "O" then goto A1F
+REM --------
+TEST2A:
+if CB$ = "G" then goto A2A
+TEST2B:
+if CB$ = "Y" then goto A2B
+TEST2C:
+if CB$ = "B" then goto A2C
+TEST2D:
+if CB$ = "R" then goto A2D
+TEST2E:
+if CB$ = "W" then goto A2E
+TEST2F:
+if CB$ = "O" then goto A2F
+REM --------
+TEST3A:
+if CC$ = "G" then goto A3A
+TEST3B:
+if CC$ = "Y" then goto A3B
+TEST3C:
+if CC$ = "B" then goto A3C
+TEST3D:
+if CC$ = "R" then goto A3D
+TEST3E:
+if CC$ = "W" then goto A3E
+TEST3F:
+if CC$ = "O" then goto A3F
+REM --------
+TEST4A:
+if CD$ = "G" then goto A4A
+TEST4B:
+if CD$ = "Y" then goto A4B
+TEST4C:
+if CD$ = "B" then goto A4C
+TEST4D:
+if CD$ = "R" then goto A4D
+TEST4E:
+if CD$ = "W" then goto A4E
+TEST4F:
+if CD$ = "O" then goto A4F
+REM --------------------------------------------------
+input "FIRST COLOR?   ",CE$
+input"SECOND COLOR?   ",CF$
+input "THIRD COLOR?   ",CG$
+input "FOURTH COLOR?   ",CH$
+CLS
+IF CA$ = "B" THEN PRINT "1 CORRECT COLOR"
+IF CB$ = "B" THEN PRINT "1 CORRECT COLOR"
+IF CC$ = "B" THEN PRINT "1 CORRECT COLOR"
+IF CD$ = "B" THEN PRINT "1 CORRECT COLOR"
+IF CA$ = "W" THEN PRINT "1 CORRECT COLOR"
+IF CB$ = "W" THEN PRINT "1 CORRECT COLOR"
+IF CC$ = "W" THEN PRINT "1 CORRECT COLOR"
+IF CD$ = "W" THEN PRINT "1 CORRECT COLOR"
+IF CA$ = "O" THEN PRINT "1 CORRECT COLOR"
+IF CB$ = "O" THEN PRINT "1 CORRECT COLOR"
+IF CC$ = "O" THEN PRINT "1 CORRECT COLOR"
+IF CD$ = "O" THEN PRINT "1 CORRECT COLOR"
+IF CA$ = "G" THEN PRINT "1 CORRECT COLOR"
+IF CB$ = "G" THEN PRINT "1 CORRECT COLOR"
+IF CC$ = "G" THEN PRINT "1 CORRECT COLOR"
+IF CD$ = "G" THEN PRINT "1 CORRECT COLOR"
+IF CA$ = "B" THEN PRINT "1 CORRECT POSITION"
+IF CB$ = "O" THEN PRINT "1 CORRECT POSITION"
+IF CC$ = "G" THEN PRINT "1 CORRECT POSITION"
+IF CD$ = "W" THEN PRINT "1 CORRECT POSITION"
+print "---------------------------------------"
+IF CE$ = "B" AND CF$ = "O" AND CG$ = "G" AND CH$ = "W" THEN CLS : PRINT "CONGRATS! YOU SOLVED THE PUZZLE!" : END
+IF CE$ = "B" THEN PRINT "1 CORRECT COLOR"
+IF CF$ = "B" THEN PRINT "1 CORRECT COLOR"
+IF CG$ = "B" THEN PRINT "1 CORRECT COLOR"
+IF CH$ = "B" THEN PRINT "1 CORRECT COLOR"
+IF CE$ = "W" THEN PRINT "1 CORRECT COLOR"
+IF CF$ = "W" THEN PRINT "1 CORRECT COLOR"
+IF CG$ = "W" THEN PRINT "1 CORRECT COLOR"
+IF CH$ = "W" THEN PRINT "1 CORRECT COLOR"
+IF CE$ = "O" THEN PRINT "1 CORRECT COLOR"
+IF CF$ = "O" THEN PRINT "1 CORRECT COLOR"
+IF CG$ = "O" THEN PRINT "1 CORRECT COLOR"
+IF CH$ = "O" THEN PRINT "1 CORRECT COLOR"
+IF CE$ = "G" THEN PRINT "1 CORRECT COLOR"
+IF CF$ = "G" THEN PRINT "1 CORRECT COLOR"
+IF CG$ = "G" THEN PRINT "1 CORRECT COLOR"
+IF CH$ = "G" THEN PRINT "1 CORRECT COLOR"
+IF CE$ = "B" THEN PRINT "1 CORRECT POSITION"
+IF CF$ = "O" THEN PRINT "1 CORRECT POSITION"
+IF CG$ = "G" THEN PRINT "1 CORRECT POSITION"
+IF CH$ = "W" THEN PRINT "1 CORRECT POSITION"
+print "---------------------------------------"
+TEST5A:
+if CE$ = "G" then goto B1A
+TEST5B:
+if CE$ = "Y" then goto B1B
+TEST5C:
+if CE$ = "B" then goto B1C
+TEST5D:
+if CE$ = "R" then goto B1D
+TEST5E:
+if CE$ = "W" then goto B1E
+TEST5F:
+if CE$ = "O" then goto B1F
+REM ------------------------------
+TEST6A:
+if CF$ = "G" then goto B2A
+TEST6B:
+if CF$ = "Y" then goto B2B
+TEST6C:
+if CF$ = "B" then goto B2C
+TEST6D:
+if CF$ = "R" then goto B2D
+TEST6E:
+if CF$ = "W" then goto B2E
+TEST6F:
+if CF$ = "O" then goto B2F
+REM ------------------------------
+TEST7A:
+if CG$ = "G" then goto B3A
+TEST7B:
+if CG$ = "Y" then goto B3B
+TEST7C:
+if CG$ = "B" then goto B3C
+TEST7D:
+if CG$ = "R" then goto B3D
+TEST7E:
+if CG$ = "W" then goto B3E
+TEST7F:
+if CG$ = "O" then goto B3F
+REM ------------------------------
+TEST8A:
+if CH$ = "G" then goto B4A
+TEST8B:
+if CH$ = "Y" then goto B4B
+TEST8C:
+if CH$ = "B" then goto B4C
+TEST8D:
+if CH$ = "R" then goto B4D
+TEST8E:
+if CH$ = "W" then goto B4E
+TEST8F:
+if CH$ = "O" then goto B4F
+REM --------------
+input "FIRST COLOR?   ",CI$
+input"SECOND COLOR?   ",CJ$
+input "THIRD COLOR?   ",CK$
+input "FOURTH COLOR?   ",CL$
+TEST9A:
+if CI$ = "G" then goto C1A
+TEST9B:
+if CI$ = "Y" then goto C1B
+TEST9C:
+if CI$ = "B" then goto C1C
+TEST9D:
+if CI$ = "R" then goto C1D
+TEST9E:
+if CI$ = "W" then goto C1E
+TEST9F:
+if CI$ = "O" then goto C1F
+REM -----------------
+TEST10A:
+if CJ$ = "G" then goto C2A
+TEST10B:
+if CJ$ = "Y" then goto C2B
+TEST10C:
+if CJ$ = "B" then goto C2C
+TEST10D:
+if CJ$ = "R" then goto C2D
+TEST10E:
+if CJ$ = "W" then goto C2E
+TEST10F:
+if CJ$ = "O" then goto C2F
+REM --------
+TEST11A:
+if CK$ = "G" then goto C3A
+TEST11B:
+if CK$ = "Y" then goto C2B
+TEST11C:
+if CK$ = "B" then goto C3C
+TEST11D:
+if CK$ = "R" then goto C3D
+TEST11E:
+if CK$ = "W" then goto C3E
+TEST11F:
+if CK$ = "O" then goto C3F
+end
+REM --------
+TEST12A:
+if CL$ = "G" then goto C4A
+TEST12B:
+if CL$ = "Y" then goto C4B
+TEST12C:
+if CL$ = "B" then goto C4C
+TEST12D:
+if CL$ = "R" then goto C4D
+TEST12E:
+if CL$ = "W" then goto C4E
+TEST12F:
+if CL$ = "O" then goto C4F
+end
+BOX1COLOR1:
+A1A:
+color green
+circle a, fa, r
+GOTO TEST1B
+end
+A1B:
+color yellow
+circle a, fa, r
+GOTO TEST1C
+end
+A1C:
+color blue
+circle a, fa, r
+GOTO TEST1D
+end
+A1D:
+color red
+circle a, fa, r
+GOTO TEST1E
+end
+A1E:
+color white
+circle a, fa, r
+GOTO TEST1F
+end
+A1F:
+color orange
+circle a, fa, r
+GOTO TEST2A
+end
+
+BOX1COLOR2:
+A2A:
+color green
+circle a, ga, r
+GOTO TEST2B
+end
+A2B:
+color yellow
+circle a, ga, r
+GOTO TEST2C
+end
+A2C:
+color blue
+circle a, ga, r
+GOTO TEST2D
+end
+A2D:
+color red
+circle a, ga, r
+GOTO TEST2E
+end
+A2E:
+color white
+circle a, ga, r
+GOTO TEST2F
+end
+A2F:
+color orange
+circle a, ga, r
+GOTO TEST3A
+end
+
+BOX1COLOR3:
+A3A:
+color green
+circle a, ha, r
+GOTO TEST3B
+end
+A3B:
+color yellow
+circle a, ha, r
+GOTO TEST3C
+end
+A3C:
+color blue
+circle a, ha, r
+GOTO TEST3D
+end
+A3D:
+color red
+circle a, ha, r
+GOTO TEST3E
+end
+A3E:
+color white
+circle a, ha, r
+GOTO TEST3F
+end
+A3F:
+color orange
+circle a, ha, r
+GOTO TEST4A
+end
+
+BOX1COLOR4:
+A4A:
+color green
+circle a, ia, r
+GOTO TEST4B
+end
+A4B:
+color yellow
+circle a, ia, r
+GOTO TEST4C
+end
+A4C:
+color blue
+circle a, ia, r
+GOTO TEST4D
+end
+A4D:
+color red
+circle a, ia, r
+GOTO TEST4E
+end
+A4E:
+color white
+circle a, ia, r
+GOTO TEST4F
+end
+A4F:
+color orange
+circle a, ia, r
+end
+REM -----------------------------------------
+BOX2COLOR1:
+B1A:
+color green
+circle b, fa, r
+GOTO TEST5B
+end
+B1B:
+color yellow
+circle b, fa, r
+GOTO TEST5C
+end
+B1C:
+color blue
+circle b, fa, r
+GOTO TEST5D
+end
+B1D:
+color red
+circle b, fa, r
+GOTO TEST5E
+end
+B1E:
+color white
+circle b, fa, r
+GOTO TEST5F
+end
+B1F:
+color orange
+circle b, fa, r
+GOTO TEST6A
+end
+BOX2COLOR2:
+B2A:
+color green
+circle b, ga, r
+GOTO TEST6B
+end
+B2B:
+color yellow
+circle b, ga, r
+GOTO TEST6C
+end
+B2C:
+color blue
+circle b, ga, r
+GOTO TEST6D
+end
+B2D:
+color red
+circle b, ga, r
+GOTO TEST6E
+end
+B2E:
+color white
+circle b, ga, r
+GOTO TEST6F
+end
+B2F:
+color orange
+circle b, ga, r
+GOTO TEST7A
+end
+BOX2COLOR3:
+B3A:
+color green
+circle b, ha, r
+GOTO TEST7B
+end
+B3B:
+color yellow
+circle b, ha, r
+GOTO TEST7C
+end
+B3C:
+color blue
+circle b, ha, r
+GOTO TEST7D
+end
+B3D:
+color red
+circle b, ha, r
+GOTO TEST7E
+end
+B3E:
+color white
+circle b, ha, r
+GOTO TEST7F
+end
+B3F:
+color orange
+circle b, ha, r
+GOTO TEST8A
+end
+BOX2COLOR4:
+B4A:
+color green
+circle b, ia, r
+GOTO TEST8B
+end
+B4B:
+color yellow
+circle b, ia, r
+GOTO TEST8C
+end
+B4C:
+color blue
+circle b, ia, r
+GOTO TEST8D
+end
+B4D:
+color red
+circle b, ia, r
+GOTO TEST8E
+end
+B4E:
+color white
+circle b, ia, r
+GOTO TEST8F
+end
+B4F:
+color orange
+circle b, ia, r
+end
+C1A:
+color green
+circle c, fa, r
+GOTO TEST9B
+end
+C1B:
+color yellow
+circle c, fa, r
+GOTO TEST9C
+end
+C1C:
+color blue
+circle c, fa, r
+GOTO TEST9D
+end
+C1D:
+color red
+circle c, fa, r
+GOTO TEST9E
+end
+C1E:
+color white
+circle c, fa, r
+GOTO TEST9F
+end
+C1F:
+color orange
+circle c, fa, r
+goto TEST10A
+end
+REM ---------------
+C2A:
+color green
+circle c,ga, r
+GOTO TEST10B
+end
+C2B:
+color yellow
+circle c, ga, r
+GOTO TEST10C
+end
+C2C:
+color blue
+circle c, ga, r
+GOTO TEST10D
+end
+C2D:
+color red
+circle c, ga, r
+GOTO TEST10E
+end
+C2E:
+color white
+circle c, ga, r
+GOTO TEST10F
+end
+C2F:
+color orange
+circle c, ga, r
+GOTO TEST11A
+end
+REM ---------------
+C3A:
+color green
+circle c,ha, r
+GOTO TEST11B
+end
+C3B:
+color yellow
+circle c, ha, r
+GOTO TEST11C
+end
+C3C:
+color blue
+circle c, ha, r
+GOTO TEST11D
+end
+C3D:
+color red
+circle c, ha, r
+GOTO TEST11E
+end
+C3E:
+color white
+circle c, ha, r
+GOTO TEST11F
+end
+C3F:
+color orange
+circle c, ha, r
+GOTO TEST12A
+end
+REM ---------------
+C4A:
+color green
+circle c, ia, r
+GOTO TEST12B
+end
+C4B:
+color yellow
+circle c, ia, r
+GOTO TEST12C
+end
+C4C:
+color blue
+circle c, ia, r
+GOTO TEST12D
+end
+C4D:
+color red
+circle c, ia, r
+GOTO TEST12E
+end
+C4E:
+color white
+circle c, ia, r
+GOTO TEST12F
+end
+C4F:
+color orange
+circle c, ia, r
+end

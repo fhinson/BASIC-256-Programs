@@ -1,0 +1,87 @@
+for t = 1 to 1000000
+clg
+cls
+a = int(rand *3)
+b = int(rand *4)
+c = int(rand *5)
+d = int(rand *6)
+e = int(rand *7)
+f = int(rand *6)
+g = int(rand *5)
+h = int(rand *4)
+i = int(rand *3)
+j = int(rand *2)
+k = int(rand *3)
+l = int(rand *4)
+
+print "Enjoy your music!"
+
+
+
+
+bar1:
+color cyan
+rect 5, 1, 20, t * (a+1)
+goto bar2
+
+
+
+bar2:
+color gray
+rect 30, 1, 20, t * (b+1)
+
+
+
+bar3:
+color red
+rect 55, 1, 20, t * (c+1)
+
+
+
+bar4:
+color yellow
+rect 80, 1, 20, t * (d+1)
+
+
+
+bar5:
+color orange
+rect 105, 1, 20, t * (e+1)
+
+
+
+bar6:
+color white
+rect 130, 1, 20, t * (f+1)
+
+
+
+bar7:
+color blue
+rect 155, 1, 20, t * (g+1)
+
+
+
+bar8:
+color purple
+rect 180, 1, 20, t * (h+1)
+
+
+
+bar9:
+color black
+rect 205, 1, 20, t * (i+1)
+
+
+bar10:
+color green
+rect 230, 1, 20, t * (j+1)
+
+
+
+bar11:
+color darkred
+rect 255, 1, 20, t * (k+1)
+
+pause 0.1
+next t

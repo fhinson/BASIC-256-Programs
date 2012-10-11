@@ -1,0 +1,6 @@
+coordinates of first green box are 136, 270, 2
+coordinates of red box are 164, 50, 2
+coordinates of yellow box are 40, 146, 2
+coordinates of blue box are 260, 174, 2
+20 for y is one step
+use for next for movement, the variable of the for depends on the random dice 

@@ -1,0 +1,127 @@
+
+
+
+clg
+fastgraphics
+for Y = 0 to 50
+
+print "Player 1:"
+print "Player 2:"
+
+gosub Baskethoop
+a = int(rand*70)
+b = int(rand*70)
+g = (rand*1)
+h = (rand*1)
+
+c = 80+a
+d = 220-b
+e = 276
+r = 276
+f = 5
+t = 5
+q = 1
+s = 1
+color darkyellow
+rect 50+a, 275, 20, 15
+rect 50+a, 290, 5, 10
+rect 65+a, 290, 5, 10
+rect 57+a, 270, 6, 8
+rect 53+a, 262, 14, 10
+rect 40+a, 275, 40, 5
+
+color darkcyan
+rect 230-b, 275, 20, 15
+rect 230-b, 290, 5, 10
+rect 245-b, 290, 5, 10
+rect 237-b, 270, 6, 8
+rect 233-b, 262, 14, 10
+rect 220-b, 275, 40, 5
+
+
+for baki = 1 to 300
+gosub Baskethoop
+gosub shooters
+color darkyellow
+circle c, e, f
+color darkcyan
+circle d, r, t
+c = c+g
+e = e-q
+r = r-s
+d = d-h
+
+
+gosub bounce
+
+if c > 123 and c < 145 and e > 39 and e < 61 then gosub sink2
+
+if d > 123 and d < 145 and r > 39 and e < 61 then gosub sink1
+
+refresh
+clg
+next baki
+
+clg
+cls
+next Y
+end
+
+Baskethoop:
+color orange
+rect 105, 15, 60, 40
+color darkgray
+rect 110, 20, 50, 30
+color darkorange
+circle 134, 50, 13
+color gray
+circle 134, 50, 10
+return
+end
+
+shooters:
+color darkyellow
+rect 50+a, 275, 20, 15
+rect 50+a, 290, 5, 10
+rect 65+a, 290, 5, 10
+rect 57+a, 270, 6, 8
+rect 53+a, 262, 14, 10
+rect 40+a, 275, 40, 5
+
+color darkcyan
+rect 230-b, 275, 20, 15
+rect 230-b, 290, 5, 10
+rect 245-b, 290, 5, 10
+rect 237-b, 270, 6, 8
+rect 233-b, 262, 14, 10
+rect 220-b, 275, 40, 5
+return
+end
+
+sink1:
+t = 10
+d = 134
+r = 50
+for go = 0 to 10
+t = t -1 
+next go
+t = 0
+return
+end
+
+sink2:
+f = 10
+c = 134
+e = 50
+for go = 0 to 10
+f = f - 1
+next go
+return
+end
+
+bounce:
+if c > 100 and c < 170 and e > 14 and e < 56 then g = -g
+if c > 100 and c < 170 and e > 14 and e < 56 then q = -q
+if d > 100 and d < 170 and r > 14 and r < 56 then h = -h
+if d > 100 and d < 170 and r > 14 and r < 56 then q = -s
+return
